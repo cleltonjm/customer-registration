@@ -11,6 +11,7 @@ export const FormContainer = styled.div`
     flex-direction: column;
 
     input {
+        width: 100%;
         border: 0;
         border-radius: 6px;
         padding: 0.25rem;
@@ -21,8 +22,6 @@ export const FormContainer = styled.div`
 `;
 
 export const TextContainer = styled.text`
-    display: flex;
-
     color: ${props => props.theme.white}
 `;
 
@@ -31,6 +30,7 @@ export const ButtonSubmit = styled.button`
     border: 0;
     padding: 0.5rem;
     border-radius: 8px;
+    margin-top: 15px;
 
     display: flex;
     align-items: center;
