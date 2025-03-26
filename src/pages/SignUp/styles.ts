@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.div`
-    width: 25%;
-    height: 100%;
-    gap: 0.25rem;
+export const SignUpContainer = styled.main`
+    flex: 1;
+    width: 40%;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+`;
+
+export const FormContainer = styled.div`
+    label {
+        color: ${props => props.theme.white}
+    }
 
     input {
         width: 100%;
@@ -19,10 +24,6 @@ export const FormContainer = styled.div`
         background: ${props => props.theme["gray-400"]};
         color: ${props => props.theme["gray-200"]};
     }
-`;
-
-export const TextContainer = styled.text`
-    color: ${props => props.theme.white}
 `;
 
 export const ButtonSubmit = styled.button`
@@ -43,7 +44,12 @@ export const ButtonSubmit = styled.button`
     background: ${props => props.theme["green-500"]};
     color: ${props => props.theme["gray-100"]};
 
-    &:hover {
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
         background: ${props => props.theme["green-700"]};
     }
 `;
